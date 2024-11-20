@@ -36,6 +36,14 @@ p {
 @keyframes mymove {
     50% {block-size: 100px;}
 }
+.format{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Create 4 columns */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    justify-items: center; /* Centers the items horizontally */
+margin-bottom: 20px;
+}
 
 /* .container {
     display: block;
