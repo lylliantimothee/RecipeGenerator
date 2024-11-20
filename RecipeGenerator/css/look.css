@@ -42,7 +42,7 @@ p {
     gap: 20px; /* Space between items */
     padding: 20px;
     justify-items: center; /* Centers the items horizontally */
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 /* .container {
