@@ -141,15 +141,17 @@ const recipes = [
 ];
 
 
-// Update these functions in your action.js file
+
 function filterRecipes() {
+    console.log("filtering recipes!");
+
     const selected = Array.from(
         document.querySelectorAll('input[type="checkbox"]:checked')
-    ).map(cb => cb.value);
+    ).map(cb => cb.data);
 
     console.log('Selected items:', selected);
 
-    if (selected.length === 0) {
+    if (selected.length == 0) {
         // If nothing is selected, show all recipes
         displayRecipes(recipes);
         return;
