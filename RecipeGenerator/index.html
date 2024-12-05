@@ -3,160 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCSC Recipe Generator</title>
-    <style>
-        body {
-            margin: 30px;
-            padding: 20px;
-            background: #659972;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            color: black;
-            margin-bottom: 15px;
-        }
-
-        .checkbox-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        label {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            color: black;
-        }
-
-        .find-recipes-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: white;
-            border: 2px solid #333;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        #recipe-results {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .recipe-card {
-            background: #f5f5f5;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .recipe-card h3 {
-            margin: 0 0 10px 0;
-            color: #333;
-        }
-
-        .view-recipe-btn {
-            background: #659972;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="css/look.css">
 </head>
 <body>
     <div class="container">
-        <div class="section">
-            <h1>Appliances</h1>
+        <!-- Appliances Section -->
+        <section class="section">
+            <h2>Appliances</h2>
             <div class="checkbox-group">
-                <label><input type="checkbox" value="Pots"> Pots</label>
-                <label><input type="checkbox" value="Oven"> Oven</label>
-                <label><input type="checkbox" value="Pans"> Pans</label>
-                <label><input type="checkbox" value="Stove"> Stove</label>
-                <label><input type="checkbox" value="Microwave"> Microwave</label>
-                <label><input type="checkbox" value="Rice Cooker"> Rice Cooker</label>
-                <label><input type="checkbox" value="Baking Sheet"> Baking Sheet</label>
-                <label><input type="checkbox" value="Baking Tin"> Baking Tin</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Pots"> Pots</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Oven"> Oven</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Pans"> Pans</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Stove"> Stove</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Microwave"> Microwave</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Rice Cooker"> Rice Cooker</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Baking Sheet"> Baking Sheet</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Baking Tin"> Baking Tin</label>
             </div>
+        </section>
+
+        <!-- Meat & Protein Section -->
+        <section class="section">
+            <h2>Meat & Protein</h2>
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" data-item="Beef"> Beef</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Chicken"> Chicken</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Turkey"> Turkey</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Pork"> Pork</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Fish/Seafood"> Fish/Seafood</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Ground Beef"> Ground Beef</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Tofu"> Tofu</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Salmon"> Salmon</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Tuna"> Tuna</label>
+            </div>
+        </section>
+
+        <!-- Vegetables Section -->
+        <section class="section">
+            <h2>Vegetables</h2>
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" data-item="Tomatoes"> Tomatoes</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Spinach"> Spinach</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Carrots"> Carrots</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Broccoli"> Broccoli</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Onions"> Onions</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Potatoes"> Potatoes</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Bell Peppers"> Bell Peppers</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Mushrooms"> Mushrooms</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Celery"> Celery</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Garlic"> Garlic</label>
+            </div>
+        </section>
+
+        <!-- Dairy Section -->
+        <section class="section">
+            <h2>Dairy</h2>
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" data-item="Butter"> Butter</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Cheese"> Cheese</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Milk"> Milk</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Greek Yogurt"> Greek Yogurt</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Cream Cheese"> Cream Cheese</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Parmesan"> Parmesan</label>
+            </div>
+        </section>
+
+        <!-- Grains Section -->
+        <section class="section">
+            <h2>Grains</h2>
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" data-item="Rice"> Rice</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Noodles"> Noodles</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Pasta"> Pasta</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Bread"> Bread</label>
+                <label class="checkbox-label"><input type="checkbox" data-item="Quinoa"> Quinoa</label>
+            </div>
+        </section>
+
+        <!-- Selected Tags Container -->
+        <div id="selected-tags" class="selected-tags-container">
+            <h3>Selected Items:</h3>
+            <div id="tags-display" class="tags-display"></div>
         </div>
 
-        <div class="section">
-            <h1>Meat & Protein</h1>
-            <div class="checkbox-group">
-                <label><input type="checkbox" value="Beef"> Beef</label>
-                <label><input type="checkbox" value="Chicken"> Chicken</label>
-                <label><input type="checkbox" value="Turkey"> Turkey</label>
-                <label><input type="checkbox" value="Pork"> Pork</label>
-                <label><input type="checkbox" value="Fish/Seafood"> Fish/Seafood</label>
-                <label><input type="checkbox" value="Ground Beef"> Ground Beef</label>
-                <label><input type="checkbox" value="Tofu"> Tofu</label>
-                <label><input type="checkbox" value="Salmon"> Salmon</label>
-                <label><input type="checkbox" value="Tuna"> Tuna</label>
-            </div>
-        </div>
+        <button id="findRecipes" class="find-recipes-btn">Find Recipes</button>
 
-        <div class="section">
-            <h1>Vegetables</h1>
-            <div class="checkbox-group">
-                <label><input type="checkbox" value="Tomatoes"> Tomatoes</label>
-                <label><input type="checkbox" value="Spinach"> Spinach</label>
-                <label><input type="checkbox" value="Carrots"> Carrots</label>
-                <label><input type="checkbox" value="Broccoli"> Broccoli</label>
-                <label><input type="checkbox" value="Onions"> Onions</label>
-                <label><input type="checkbox" value="Potatoes"> Potatoes</label>
-                <label><input type="checkbox" value="Bell Peppers"> Bell Peppers</label>
-                <label><input type="checkbox" value="Mushrooms"> Mushrooms</label>
-                <label><input type="checkbox" value="Celery"> Celery</label>
-                <label><input type="checkbox" value="Garlic"> Garlic</label>
-            </div>
-        </div>
-
-        <div class="section">
-            <h1>Dairy</h1>
-            <div class="checkbox-group">
-                <label><input type="checkbox" value="Butter"> Butter</label>
-                <label><input type="checkbox" value="Cheese"> Cheese</label>
-                <label><input type="checkbox" value="Milk"> Milk</label>
-                <label><input type="checkbox" value="Greek Yogurt"> Greek Yogurt</label>
-                <label><input type="checkbox" value="Cream Cheese"> Cream Cheese</label>
-                <label><input type="checkbox" value="Parmesan"> Parmesan</label>
-            </div>
-        </div>
-
-        <div class="section">
-            <h1>Grains</h1>
-            <div class="checkbox-group">
-                <label><input type="checkbox" value="Rice"> Rice</label>
-                <label><input type="checkbox" value="Noodles"> Noodles</label>
-                <label><input type="checkbox" value="Pasta"> Pasta</label>
-                <label><input type="checkbox" value="Bread"> Bread</label>
-                <label><input type="checkbox" value="Quinoa"> Quinoa</label>
-            </div>
-        </div>
-
-        <button onclick="filterRecipes()" class="find-recipes-btn">Find Recipes</button>
-
-        <div id="recipe-results">
-            <h1>Available Recipes</h1>
-            <div id="recipe-container">
-                <!-- Recipes will appear here -->
-            </div>
+        <div id="recipe-results" class="recipe-results">
+            <h2>Available Recipes</h2>
+            <div id="recipe-container" class="recipe-container"></div>
         </div>
     </div>
-
-    <script src="action.js"></script>
+    <script src="js/action.js"></script>
 </body>
 </html>
