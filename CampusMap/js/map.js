@@ -48,9 +48,8 @@ const map = L.map('map').setView(mapCenter, mapZoom);
 
 // Set up the map filters
 let myFilter = [
-    'grayscale:100%',
     // 'contrast:90%',
-    'sepia:35%',
+    'sepia:35%'
     // 'brightness:110%',
 ];
 
