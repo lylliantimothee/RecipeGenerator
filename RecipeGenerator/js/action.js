@@ -140,18 +140,6 @@ const recipes = [
     }
 ];
 
-// Toggle Map Display
-// var x = document.getElementsByClassName("oncamp-btn");
-// $(".oncamp-btn").click(function(){
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//         console.log("hi");
-//       } 
-//     else {
-//         x.style.display = "none";
-//       }
-// })
-
 // Selected items tracking
 let selectedItems = new Set();
 
@@ -297,7 +285,7 @@ function showRecipeDetails(recipeName) {
     modal.className = 'recipe-modal';
     modal.innerHTML = `
         <div class="recipe-modal-content">
-            <h2>${recipe.name}</h2>
+            <h2>${recipe.name} <img src='img/dairy.png'/></h2>
             <p><strong>Time:</strong> ${recipe.time}</p>
             <p><strong>Servings:</strong> ${recipe.servings}</p>
             
