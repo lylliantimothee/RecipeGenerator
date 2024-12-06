@@ -4,35 +4,35 @@ const placeDB = [
         name: "UCSC Produce Pop Up",
         location: [36.98289481428539, -122.0543879280048],
         description: "Produce Pop Up is a twice weekly farmstand selling low cost produce grown at the UCSC Farm. On Wednesdays they are in Quarry Plaza from 11-3 and on Fridays they are located in front of the Science and Engineering Library from 11-3.",
-        icon: "temp",
+        icon: "food-icon",
         image: "temp.png"
     },
     {
         name: "Redwood Free Market",
         location: [36.99308428595387, -122.0644774463934],
         description: "Features produce, dry goods, and CalFresh information",
-        icon: "temp",
+        icon: "food-icon",
         image: "redwood-market.jpg"
     },
     {
         name: "Porter Market",
         location: [36.99634199635114, -122.06511037067514],
         description: "offers grab-n-go meals, snacks, bottled beverages, smoothies, organic espresso drinks made-to-order, plus grocery and convenience items",
-        icon: "temp",
+        icon: "food-icon",
         image: "porter-market.png"
     },
     {
         name: "Merrill Market",
         location: [37.00180366763297, -122.05280076477922],
         description: "offers grab-n-go meals, snacks, bottled beverages, smoothies, and organic coffee, plus grocery and convenience items.",
-        icon: "temp",
+        icon: "food-icon",
         image: "merrill-market.jpg"
     },   
     {
         name: "Cowell Coffee Shop",
         location: [36.99732280331607, -122.05299908871285],
         description: "Cowell Coffee Shop is a non-transactional, student run cafe committed to making healthy and sustainable food accesible to students facing food insecurity.",
-        icon: "temp",
+        icon: "food-icon",
         image: "cowell-coffee.png"
     }   
 ];
@@ -62,7 +62,7 @@ const mapLayer = L.tileLayer.colorFilter('https://{s}.tile.openstreetmap.org/{z}
 }).addTo(map);
 
 const iconDir = "img/";
-const iconSize = [48, 48];
+const iconSize = [55, 55];
 const iconAnchor = [16, 32];
 const popupAnchor = [0, -32];
 // all icons as pngs in img/icons
