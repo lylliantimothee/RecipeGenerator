@@ -1,34 +1,40 @@
 // Let's create a database of interesting places
 const placeDB = [
     {
-        name: "UCSC Organic Farm Stand",
+        name: "UCSC Produce Pop Up",
         location: [36.98289481428539, -122.0543879280048],
-        description: "This peaceful shrine is a great place to meditate, reflect, or just take a break from the hustle and bustle of campus life.",
-        icon: "temp",
+        description: "Produce Pop Up is a twice weekly farmstand selling low cost produce grown at the UCSC Farm. On Wednesdays they are in Quarry Plaza from 11-3 and on Fridays they are located in front of the Science and Engineering Library from 11-3.",
+        icon: "food-icon",
         image: "temp.png"
     },
     {
         name: "Redwood Free Market",
         location: [36.99308428595387, -122.0644774463934],
-        description: "Caer Ellillon is a sacred circle that has four direction altars and a large totem pole. <i>Caer</i> means santuary and <i>Ellilon</i> can mean Gods or Elves. In this case, it is a dedication to the earth spirits of the forest and of nature.",
-        icon: "temp",
-        image: "temp.png"
+        description: "Features produce, dry goods, and CalFresh information",
+        icon: "food-icon",
+        image: "redwood-market.jpg"
     },
     {
         name: "Porter Market",
         location: [36.99634199635114, -122.06511037067514],
-        description: "Take a walk through one of the Wilder Ranch meadows and down into the gulch to brave IXL/Hellhole cave.",
-        icon: "temp",
-        image: "temp.png"
+        description: "offers grab-n-go meals, snacks, bottled beverages, smoothies, organic espresso drinks made-to-order, plus grocery and convenience items",
+        icon: "food-icon",
+        image: "porter-market.png"
     },
     {
         name: "Merrill Market",
         location: [37.00180366763297, -122.05280076477922],
-        description: "This library is one of the largest on the West Coast. It has a variety of resources, including books, journals, and databases. It's a great place to study or do research.",
-        icon: "temp",
-        image: "temp.png"
+        description: "offers grab-n-go meals, snacks, bottled beverages, smoothies, and organic coffee, plus grocery and convenience items.",
+        icon: "food-icon",
+        image: "merrill-market.jpg"
+    },   
+    {
+        name: "Cowell Coffee Shop",
+        location: [36.99732280331607, -122.05299908871285],
+        description: "Cowell Coffee Shop is a non-transactional, student run cafe committed to making healthy and sustainable food accesible to students facing food insecurity.",
+        icon: "food-icon",
+        image: "cowell-coffee.png"
     }   
-    
 ];
             
 const imgDir = "img/";
@@ -56,7 +62,7 @@ const mapLayer = L.tileLayer.colorFilter('https://{s}.tile.openstreetmap.org/{z}
 }).addTo(map);
 
 const iconDir = "img/";
-const iconSize = [48, 48];
+const iconSize = [55, 55];
 const iconAnchor = [16, 32];
 const popupAnchor = [0, -32];
 // all icons as pngs in img/icons
