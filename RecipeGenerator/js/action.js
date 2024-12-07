@@ -26,7 +26,13 @@ const recipes = [
             "Serve over steamed rice."
         ],
         time: "25 mins",
-        servings: 4
+        servings: 4,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/veg.png",
+            "./RecipeGenerator/img/grains.png"
+        ]
     },
     {
         name: "Dan Dan Noodles",
@@ -54,7 +60,13 @@ const recipes = [
             "Top with pork, sesame seeds, and green onions."
         ],
         time: "20 mins",
-        servings: 4
+        servings: 4,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/veg.png",
+            "./RecipeGenerator/img/grains.png"
+        ]
     },
     {
         name: "Rice Cooker Pancake",
@@ -84,7 +96,13 @@ const recipes = [
             "Serve with toppings."
         ],
         time: "50 mins",
-        servings: 6
+        servings: 6,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/dairy.png",
+            "./RecipeGenerator/img/grains.png"
+        ]
     },
     {
         name: "One Pot Rice Cooker Meal",
@@ -114,7 +132,13 @@ const recipes = [
             "Serve with sesame seeds and chili sauce."
         ],
         time: "30 mins",
-        servings: 4
+        servings: 4,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/veg.png",
+            "./RecipeGenerator/img/grains.png"
+        ]
     },
     {
         name: "Shakshuka",
@@ -139,7 +163,12 @@ const recipes = [
             "Serve as desired."
         ],
         time: "25 mins",
-        servings: 4
+        servings: 4,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/veg.png"
+        ]
     },
     {
         name: "Lemon & Herb Chicken",
@@ -168,7 +197,12 @@ const recipes = [
             "Serve while hot."
         ],
         time: "75 mins",
-        servings: 4
+        servings: 4,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/veg.png"
+        ]
     },
     {
         name: "Spaghetti Bolognese",
@@ -198,7 +232,14 @@ const recipes = [
             "Serve with extra cheese and basil."
         ],
         time: "60 mins",
-        servings: 6
+        servings: 6,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/veg.png", 
+            "./RecipeGenerator/img/dairy.png",
+            "./RecipeGenerator/img/grains.png"
+        ]
     },
     {
         name: "Microwave Mac and Cheese",
@@ -222,7 +263,12 @@ const recipes = [
             "Serve hot."
         ],
         time: "15 mins",
-        servings: 4
+        servings: 4,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/dairy.png",
+            "./RecipeGenerator/img/grains.png"
+        ]
     },
     {
         name: "Congee",
@@ -241,7 +287,13 @@ const recipes = [
             "Top with scallions and serve."
         ],
         time: "80 mins",
-        servings: 2
+        servings: 2,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/veg.png",
+            "./RecipeGenerator/img/grains.png"
+        ]
     },
     {
         name: "Sriracha Noodles",
@@ -267,7 +319,14 @@ const recipes = [
             "Serve immediately."
         ],
         time: "15 mins",
-        servings: 2
+        servings: 2,
+        img: [
+            "./RecipeGenerator/img/appliances.png",
+            "./RecipeGenerator/img/protein.png",
+            "./RecipeGenerator/img/veg.png",
+            "./RecipeGenerator/img/dairy.png",
+            "./RecipeGenerator/img/grains.png"
+        ]
     }
 ];
 
@@ -380,7 +439,7 @@ function displayRecipes(filteredRecipes) {
         const card = document.createElement('div');
         card.className = 'recipe-card';
         card.innerHTML = `
-            <h3>${recipe.name}</h3>
+            <h3>${recipe.name} ${recipe.img.map(pic => `<img id='icons' src='${pic}'/>`).join('')}</h3>
             <div class="recipe-details">
                 <div>
                     <p><strong>Time:</strong> ${recipe.time}</p>
@@ -416,7 +475,7 @@ function showRecipeDetails(recipeName) {
     modal.className = 'recipe-modal';
     modal.innerHTML = `
         <div class="recipe-modal-content">
-            <h2>${recipe.name} <img src='img/dairy.png'/></h2>
+            <h2>${recipe.name}</h2>
             <p><strong>Time:</strong> ${recipe.time}</p>
             <p><strong>Servings:</strong> ${recipe.servings}</p>
             
