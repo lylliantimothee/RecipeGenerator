@@ -4,6 +4,13 @@
     justify-items: center;
 }
 
+#top-part {
+    background-color: #2d5a3c;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
 /* Icons/logos */
 
 #logo {
