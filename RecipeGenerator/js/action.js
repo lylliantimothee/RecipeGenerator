@@ -500,8 +500,8 @@ const recipes = [
         appliances: [], 
         ingredients: [
             "2 Tablespoons Chia Seeds",
-            "½ Cup Milk (or Almond Milk, Coconut Milk, Oat Milk, Cashew Milk, etc.)",
-            "Sweetener of choice (Stevia, Sugar, Honey, etc.)",
+            "½ Cup Milk(any kind)",
+            "Sweetener of choice",
             "Flavoring of choice (e.g., 1 tsp cocoa for chocolate pudding, or chai spice for a variation)"
         ], 
         instructions: [
