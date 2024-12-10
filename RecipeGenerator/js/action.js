@@ -26,7 +26,11 @@ const recipes = [
             "Serve over steamed rice."
         ],
         time: "25 mins",
-        servings: 4
+        servings: 4,
+        img: [
+            "./img/protein.png",
+            "./img/dairy.png"
+        ]
     },
     {
         name: "Dan Dan Noodles",
@@ -267,9 +271,6 @@ const recipes = [
             "Serve immediately."
         ],
         time: "15 mins",
-<<<<<<< Updated upstream
-        servings: 2
-=======
         servings: 2,
         img: [
             "./RecipeGenerator/img/appliances.png",
@@ -598,7 +599,6 @@ const recipes = [
             "./RecipeGenerator/img/veg.png",
             "./RecipeGenerator/img/dairy.png"
         ]
->>>>>>> Stashed changes
     }
 ];
 
@@ -747,7 +747,7 @@ function showRecipeDetails(recipeName) {
     modal.className = 'recipe-modal';
     modal.innerHTML = `
         <div class="recipe-modal-content">
-            <h2>${recipe.name} <img src='img/dairy.png'/></h2>
+            <h2>${recipe.name} ${recipe.img.map(pic => `<img id="icon" src="${pic}"/>`)}</h2>
             <p><strong>Time:</strong> ${recipe.time}</p>
             <p><strong>Servings:</strong> ${recipe.servings}</p>
             

@@ -24,11 +24,7 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     color: #333;
     background-image: url("../img/dormbackground.jpg");
-<<<<<<< Updated upstream
     /* background-size: 2000px; */
-=======
-    background: size 100%;
->>>>>>> Stashed changes
 }
 
 .container {
@@ -314,4 +310,9 @@ button:focus {
 .view-recipe-btn:focus {
     outline: 2px solid #4a7254;
     outline-offset: 2px;
+}
+
+/* Icon sizes */
+#icon {
+    max-width: 30px;
 }
