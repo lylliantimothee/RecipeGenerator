@@ -5,7 +5,7 @@ const placeDB = [
         location: [36.98289481428539, -122.0543879280048],
         description: "Produce Pop Up is a twice weekly farmstand selling low cost produce grown at the UCSC Farm. On Wednesdays they are in Quarry Plaza from 11-3 and on Fridays they are located in front of the Science and Engineering Library from 11-3.",
         icon: "food-icon",
-        image: "temp.png"
+        image: "produce_pop.png"
     },
     {
         name: "Redwood Free Market",
