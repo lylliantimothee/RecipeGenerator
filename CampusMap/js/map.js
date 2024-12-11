@@ -91,3 +91,6 @@ placeDB.forEach(function(place) {
     );
 });
 
+
+// help
+
