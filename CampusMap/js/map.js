@@ -33,7 +33,7 @@ const placeDB = [
         location: [36.99732280331607, -122.05299908871285],
         description: "Cowell Coffee Shop is a non-transactional, student run cafe committed to making healthy and sustainable food accesible to students facing food insecurity.",
         icon: "food-icon",
-        image: "coffee.jpg"
+        image: "cowell-coffee.PNG"
     }   
 ];
             
